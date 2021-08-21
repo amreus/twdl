@@ -105,6 +105,11 @@ editions-data: [
 
 ;; GUI
 view [
+  on-key [
+    ;probe event/key
+    ; close on Esc key
+    if event/key = #"^(esc)" [ quit ]
+  ]
   title "New TiddlyWiki"
   text "Edition:"
   edition: drop-list data editions-data [ fn/text: get-filename edition ]
