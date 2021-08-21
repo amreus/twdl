@@ -4,15 +4,17 @@ Red [
 
 
 if find system/options/args "-h" [
+  print "twdl: downloads the latest empty TiddyWiki and saves in the current directory."
+  print ""
   print "Usage:"
-  print "  newtw filename"
-  print "    downloads the latest empty TiddyWiki and saves as filename.html"
-  print "    in the current directory."
+  print "  twdl [-e] [-p] [-o]"
   print ""
-  print {  Quote the filename if it contains spaces.}
-  print {    newt "my wiki"}
+  print "OPTIONS:"
+  print [tab "-e download current empty editions as `empty.html`."]
+  print [tab "-p download prerelease empty edition as `empty-prerelease.html`."]
+  print [tab "-o opens the downloaded wiki in browser."]
   print ""
-  print {  If no filename is given, a small window will prompt for a name.}
+  print {If no options are given, a the gui will open.}
   quit
 ]
 
@@ -93,6 +95,7 @@ if opt-make-editions-file [
   quit
 ]
 
+; Currently available editions
 editions-data: [
   "Empty"              ["https://tiddlywiki.com/empty.html" "empty.html"]
   "Full"               ["https://tiddlywiki.com" "tiddlywiki.html"]
