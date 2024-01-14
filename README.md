@@ -14,3 +14,5 @@ OPTIONS:
 
 If no options are given, a the gui will open.
 ```
+
+![2024-01-14_110604](https://github.com/amreus/twdl/assets/38442825/0773b1e4-2fdb-423d-a7ac-cbcb202abae8)
